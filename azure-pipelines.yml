@@ -10,12 +10,12 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task:
-UsePythonVersion@0
-inputs: 
- versionSpec: '3.x'
- addToPath: true
- -script: |
- python --version
- python name1.py
- displayName: 'Run Python Script'
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x'
+    addToPath: true
+
+- script: |
+    python --version
+    python name1.py
+  displayName: 'Run Python Script'
